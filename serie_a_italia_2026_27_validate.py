@@ -133,16 +133,19 @@ for phrase in ('Corte: ','380 jogos · calendário oficial completo','38 jornada
     assert phrase in page, f'missing UI feature: {phrase}'
 for stale in ('100 jogos, jornadas 1–10','expansão oficial para jornadas 11–38 ainda não incorporada','limitado à cobertura verificada até MD10','Fixture coverage: 100 rows'):
     assert stale not in page, f'stale HTML text: {stale}'
-match=re.search(r'const D=(\{.*?\});',page,re.S)
-assert match, 'embedded payload missing'
+dash_js=(ROOT/'dashboard.js').read_text(encoding='utf-8')
+assert '<script src="./dashboard.js" defer></script>' in page, 'external dashboard script is not linked'
+assert '<noscript>' in page and 'jsStatus' in page, 'static/diagnostic fallback missing'
+match=re.search(r'const D=(\{.*?\});',dash_js,re.S)
+assert match, 'dashboard payload missing from external script'
 payload=json.loads(match.group(1))
+assert 'window.__DASH_TEST=' in dash_js and 'calendarReady:typeof renderFixtures===\'function\'' in dash_js
 assert len(payload['matches'])==len(finished) and len(payload['fixtures'])==380 and len(payload['table'])==20
 assert len(payload['roundDates'])==38 and not payload['liveExcluded']
 assert all(len([g for g in payload['fixtures'] if g['round']==md])==10 for md in range(1,39))
 assert all(not g['date'] and not g['time'] for g in payload['fixtures'] if g['round']>=11 and g['status']!='finished')
 complete=sorted(md for md in range(1,39) if sum(int(r['matchday'])==md and r['status']=='finished' for r in rows)==10)
 assert payload['completeRounds']==complete and payload['lastCompleteRound']==(max(complete) if complete else 0)
-assert 'window.__DASH_TEST=' in page and 'calendarReady:typeof renderFixtures===\'function\'' in page
 
 cutoff=payload['cutoff']
 report=f'''Snapshot: {cutoff}
