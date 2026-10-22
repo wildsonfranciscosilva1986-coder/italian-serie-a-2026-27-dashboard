@@ -1,0 +1,61 @@
+name: Refresh Italy Serie A 2026/27 dashboard
+
+on:
+  schedule:
+    # 06:10 America/Sao_Paulo (UTC-3, all year)
+    - cron: '10 9 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/serie-a-italia-refresh.yml'
+      - 'serie_a_italia_2026_27_refresh.py'
+      - 'serie_a_italia_2026_27_build.py'
+      - 'serie_a_italia_2026_27_validate.py'
+      - 'serie_a_italia_2026_27_results.csv'
+      - 'serie_a_italia_2026_27_official_calendar.csv'
+      - 'serie_a_italia_2026_27_expand_calendar.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: italy-serie-a-2026-27-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    name: Fetch, validate, build and publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refresh final scores from ESPN
+        run: python3 serie_a_italia_2026_27_refresh.py --days-back 10
+
+      - name: Rebuild dashboard
+        run: python3 serie_a_italia_2026_27_build.py
+
+      - name: Validate fixtures, results and dashboard
+        run: python3 serie_a_italia_2026_27_validate.py
+
+      - name: Commit validated update
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add -A -- . ':!source_snapshots/official_season_calendar.pdf' ':!source_snapshots/official_season_calendar_page*.png'
+            git commit -m 'Refresh Italian Serie A dashboard'
+            git push origin main
+          else
+            echo 'No validated changes to commit.'
+          fi
