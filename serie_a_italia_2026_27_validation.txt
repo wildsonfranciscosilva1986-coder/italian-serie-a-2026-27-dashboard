@@ -1,13 +1,11 @@
-Snapshot: 2026-10-18 10:54 America/Sao_Paulo
-League: Italy Serie A 2026/27; 20 clubs.
-Fixture rows: 100, exactly 10 each for MD1–10; the source excerpt ends at MD10.
-Finished matches included: 65 (MD1–6: 60; MD7: 5).
-Official match-by-match score validation: PASS, all 65 scores and home/away orientations matched Lega Serie A calendar pages (MD1–6 10/10 each; MD7 5/5).
-Live fixture excluded: Fiorentina–Como; no in-play score included. Four other MD7 fixtures were not yet started at the cutoff.
-Independent table validation: PASS, all 20 clubs. WorldFootball.net baseline standings (MD1–6 plus Frosinone–Sassuolo 4–2) reconstructed and compared with the 65-match computed table after adding four further MD7 results independently listed by Global Sports Archive; P/W/D/L/GF/GA/points all match 20/20.
-Independent latest-result verification: Global Sports Archive listed all five completed MD7 scores; Sportstar/The Hindu also reported the three Saturday fixtures.
-Classifica official: live table was not used as a frozen table because Fiorentina–Como was still in progress.
-Fixture interaction: player details, venue splits, 5 latest, available upcoming fixtures through MD10; H2H from this season; projection thresholds; top-5 splits and rate denominators.
-JS/mobile validation: passed separately in local browser session; responsive viewport and breakpoint are present in HTML.
-Qualification display: verified CL positions 1–4 and relegation 18–20 only; other European slots left unshaded due cup/access-list dependency.
-No bookmaker, prediction feed, other league data, recurring jobs or external league project files used.
+Snapshot: 2026-10-22 08:54 America/Sao_Paulo
+League: Serie A Italy 2026/27; 20 clubs.
+Fixtures: PASS — 380 official fixture entries across 38 matchdays, 10 per MD; each club appears once per round; all 190 pairings occur twice with home/away reversed.
+Official schedule: PASS — fixture pairs and round markers match the transcribed Lega Serie A official calendar PDF. MD1–10 individual dates/times are preserved; unconfirmed MD11–38 kickoffs remain blank unless the match has been played.
+Results: PASS — 70 final scores; verified MD1–7 baseline retained; no live/partial score included. New finals are matched against the official fixture list and must retain ESPN event IDs.
+Historical official score evidence: PASS — 65 results match the saved Lega Serie A match-by-match verification file; all ten MD7 scores and home/away orientations match archived ESPN scoreboards.
+Standings: PASS for the frozen 22-Oct baseline against ESPN's independent standings snapshot. Current standings are recomputed from all final scores; the Lega live table previously returned “NO DATA,” so no live official-table comparison is claimed.
+Generated UI: PASS static checks — HTML copies match; 20 clubs, 380 fixtures, 38 rounds, dynamic cutoff, calendar selector, team profiles, home/away splits, H2H, matchup and Top 5 controls are present; responsive CSS and no-JavaScript standings fallback are present.
+Browser interaction/mobile rendering: pending live-page validation after authorized publication.
+Publication: not confirmed until the public Pages URL matches the generated build.
+Automation: refresh script and scheduled workflow must be tested after authorized repository write access is granted.

@@ -1,6 +1,11 @@
 matchday,date,home_team,home_goals,away_goals,away_team,independent_source
-7,2026-10-16,Frosinone,4,2,Sassuolo,https://globalsportsarchive.com/en/soccer/competition/serie-a-enilive-2026-2027/80361
-7,2026-10-17,Venezia,1,0,Napoli,https://globalsportsarchive.com/en/soccer/competition/serie-a-enilive-2026-2027/80361
-7,2026-10-17,Bologna,1,3,Inter,https://globalsportsarchive.com/en/soccer/competition/serie-a-enilive-2026-2027/80361
-7,2026-10-17,Roma,2,0,Genoa,https://globalsportsarchive.com/en/soccer/competition/serie-a-enilive-2026-2027/80361
-7,2026-10-18,Udinese,0,3,Lecce,https://globalsportsarchive.com/en/soccer/competition/serie-a-enilive-2026-2027/80361
+7,2026-10-16,Frosinone,4,2,Sassuolo,https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261016
+7,2026-10-17,Venezia,1,0,Napoli,https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261017
+7,2026-10-17,Bologna,1,3,Inter,https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261017
+7,2026-10-17,Roma,2,0,Genoa,https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261017
+7,2026-10-18,Udinese,0,3,Lecce,https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261018
+7,2026-10-18,Fiorentina,1,3,Como,https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261018
+7,2026-10-18,Milan,3,2,Atalanta,https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261018
+7,2026-10-18,Juventus,0,3,Lazio,https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261018
+7,2026-10-19,Monza,4,0,Cagliari,https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261019
+7,2026-10-19,Parma,0,3,Torino,https://www.espn.com/soccer/scoreboard/_/league/ita.1/date/20261019

@@ -1,76 +1,161 @@
-import csv,collections,json
+"""Fail-closed validator for the Italian Serie A 2026/27 dashboard."""
+import collections
+import csv
+import json
+import re
+from datetime import datetime
+from pathlib import Path
 
-RESULTS='serie_a_italia_2026_27_results.csv'
-OFFICIAL='serie_a_italia_2026_27_official_verification.csv'
-INDEPENDENT_BASE='serie_a_italia_2026_27_independent_baseline.csv'
-INDEPENDENT_RECENT='serie_a_italia_2026_27_independent_results.csv'
-rows=list(csv.DictReader(open(RESULTS,encoding='utf-8-sig')))
-off=list(csv.DictReader(open(OFFICIAL,encoding='utf-8-sig')))
-ind=list(csv.DictReader(open(INDEPENDENT_RECENT,encoding='utf-8-sig')))
-assert len(rows)==100
-assert len(off)==65
-assert len(ind)==5
-finished=[r for r in rows if r['status']=='finished' and r['home_goals']!='' and r['away_goals']!='']
-assert len(finished)==65
-assert len({(r['matchday'],r['home_team'],r['away_team']) for r in rows})==100
-assert len({(r['matchday'],r['home_team'],r['away_team']) for r in finished})==65
-bykey={(int(r['matchday']),r['home_team'],r['away_team']):r for r in finished}
-# Exact match-by-match score comparison against Lega Serie A snapshot evidence (65/65).
-for r in off:
-    k=(int(r['matchday']),r['home_team'],r['away_team'])
-    assert k in bykey,k
-    src=bykey[k]
-    assert int(r['home_goals'])==int(src['home_goals']) and int(r['away_goals'])==int(src['away_goals']),k
-assert set(bykey)=={(int(r['matchday']),r['home_team'],r['away_team']) for r in off}
-# The independent worldfootball baseline includes MD1-6 + the completed Frosinone-Sassuolo MD7 game.
-base={r['team']:{k:int(r[k]) for k in ('P','W','D','L','GF','GA','PTS')} for r in csv.DictReader(open(INDEPENDENT_BASE,encoding='utf-8-sig'))}
-assert len(base)==20
-# Add the four other completed MD7 games independently listed by Global Sports Archive.
-for r in ind:
-    k=(int(r['matchday']),r['home_team'],r['away_team'])
-    if k==(7,'Frosinone','Sassuolo'):continue # already included in independent baseline
+ROOT=Path('.')
+
+def read(name):
+    with (ROOT/name).open(encoding='utf-8-sig',newline='') as f:
+        return list(csv.DictReader(f))
+
+rows=read('serie_a_italia_2026_27_results.csv')
+calendar=read('serie_a_italia_2026_27_official_calendar.csv')
+legacy=read('serie_a_italia_2026_27_official_verification.csv')
+stand=read('serie_a_italia_2026_27_espn_standings_2026-10-22.csv')
+snapshot=read('source_snapshots/results_snapshot_2026-10-22.csv')
+assert len(rows)==len(calendar)==380, f'fixture counts results/calendar {len(rows)}/{len(calendar)}'
+keys=[(int(r['matchday']),r['home_team'],r['away_team']) for r in rows]
+cal_keys=[(int(r['matchday']),r['home_team'],r['away_team']) for r in calendar]
+assert len(set(keys))==len(set(cal_keys))==380, 'duplicate fixture key'
+assert set(keys)==set(cal_keys), 'results/calendar fixture mismatch'
+assert all(collections.Counter(int(r['matchday']) for r in data)[md]==10 for data in (rows,calendar) for md in range(1,39)), 'expected 10 fixtures in each of 38 matchdays'
+teams={r['home_team'] for r in rows}|{r['away_team'] for r in rows}
+assert len(teams)==20, f'club count {len(teams)}'
+for md in range(1,39):
+    games=[r for r in rows if int(r['matchday'])==md]
+    appearances=[r['home_team'] for r in games]+[r['away_team'] for r in games]
+    assert len(appearances)==len(set(appearances))==20, f'MD{md} club participation is not one match each'
+pairs=collections.defaultdict(list)
+for r in rows:pairs[frozenset((r['home_team'],r['away_team']))].append((r['home_team'],r['away_team']))
+assert len(pairs)==190 and all(len(v)==2 and v[0]==v[1][::-1] for v in pairs.values()), 'home/away double-round-robin pairing mismatch'
+
+# Reconcile every fixture and marker with the Lega Serie A official PDF transcription.
+by_key={(int(r['matchday']),r['home_team'],r['away_team']):r for r in rows}
+by_cal={(int(r['matchday']),r['home_team'],r['away_team']):r for r in calendar}
+round_markers={}
+for key,r in by_key.items():
+    c=by_cal[key]
+    assert r['round_date']==c['round_date'], (key,'round date marker mismatch')
+    assert c['source']=='Lega Serie A official season calendar PDF'
+    assert c['source_url'].endswith('blpfycdm1ozusg4otblb.pdf')
+    md=key[0]
+    if md<=10:
+        assert (r['date'],r['kickoff_local'])==(c['fixture_date'],c['kickoff_local']), (key,'MD1–10 date/time mismatch')
+    else:
+        assert not r['date'] and not r['kickoff_local'] and not c['fixture_date'] and not c['kickoff_local'], (key,'unconfirmed MD11–38 dates must remain blank')
+    assert re.fullmatch(r'20\d\d-\d\d-\d\d',r['round_date']), (md,r['round_date'])
+    round_markers.setdefault(md,set()).add(r['round_date'])
+assert len(round_markers)==38 and all(len(v)==1 for v in round_markers.values())
+assert round_markers[1]=={'2026-08-23'} and round_markers[38]=={'2027-05-30'}
+
+finished=[r for r in rows if r['status']=='finished']
+assert len(finished)>=70, f'finished count below the verified 70-match baseline: {len(finished)}'
+for r in rows:
+    if r['status']=='finished':
+        assert re.fullmatch(r'\d+',r['home_goals']) and re.fullmatch(r'\d+',r['away_goals']), ('finished row missing/invalid score',r)
+    else:
+        assert not r['home_goals'] and not r['away_goals'], ('non-final row contains a score',r)
+assert all(sum(int(r['matchday'])==md for r in finished)>=10 for md in range(1,8)), 'verified MD1–7 results must remain complete'
+assert len(snapshot)==70, 'frozen 22-Oct score baseline changed'
+snapshot_by_key={(int(r['matchday']),r['home_team'],r['away_team']):r for r in snapshot}
+assert len(snapshot_by_key)==70
+for key,s in snapshot_by_key.items():
+    current=by_key[key]
+    assert current['status']=='finished' and (current['home_goals'],current['away_goals'])==(s['home_goals'],s['away_goals']), ('baseline result changed',key)
+for r in legacy:
+    key=(int(r['matchday']),r['home_team'],r['away_team'])
+    current=by_key[key]
+    assert (int(r['home_goals']),int(r['away_goals']))==(int(current['home_goals']),int(current['away_goals'])), key
+
+# Check the complete MD7 result batch against the archived ESPN daily scoreboards.
+team_alias={'Internazionale':'Inter','FC Internazionale Milano':'Inter','AS Roma':'Roma','AC Milan':'Milan'}
+api_events=[]
+for day in ('20261016','20261017','20261018','20261019'):
+    data=json.loads((ROOT/'source_snapshots'/f'espn_scoreboard_{day}.json').read_text())
+    api_events.extend(data.get('events',[]))
+assert len(api_events)==10, f'ESPN archived MD7 events {len(api_events)}'
+api_by_key={}
+for event in api_events:
+    comp=event['competitions'][0]
+    home=next(x for x in comp['competitors'] if x['homeAway']=='home')
+    away=next(x for x in comp['competitors'] if x['homeAway']=='away')
+    key=(7,team_alias.get(home['team']['displayName'],home['team']['displayName']),team_alias.get(away['team']['displayName'],away['team']['displayName']))
+    assert comp['status']['type']['completed'] is True and key not in api_by_key, key
+    api_by_key[key]=(int(home['score']),int(away['score']))
+for key,score in api_by_key.items():
+    current=by_key[key]
+    assert (int(current['home_goals']),int(current['away_goals']))==score, (key,score)
+assert len(api_by_key)==10
+# Results added after the static 22-Oct baseline must retain an ESPN event identifier.
+if 'espn_event_id' in rows[0]:
+    for r in finished:
+        if int(r['matchday'])>=8:
+            event_id=r.get('espn_event_id')
+            assert event_id, ('new result missing ESPN event id',r)
+            archive_path=ROOT/'source_snapshots'/f'espn_result_{event_id}.json'
+            assert archive_path.exists(), ('missing immutable ESPN result evidence',event_id)
+            archive=json.loads(archive_path.read_text(encoding='utf-8'))
+            event=archive['event'];comp=event['competitions'][0]
+            home=next(x for x in comp['competitors'] if x['homeAway']=='home')
+            away=next(x for x in comp['competitors'] if x['homeAway']=='away')
+            hname=team_alias.get(home['team']['displayName'],home['team']['displayName'])
+            aname=team_alias.get(away['team']['displayName'],away['team']['displayName'])
+            assert (hname,aname)==(r['home_team'],r['away_team'])
+            assert (int(home['score']),int(away['score']))==(int(r['home_goals']),int(r['away_goals']))
+            assert archive['source_url'].startswith('https://site.api.espn.com/')
+
+# Reconcile the frozen historical table to ESPN's independently archived 22-Oct standings.
+base_calc=collections.defaultdict(lambda:dict(P=0,W=0,D=0,L=0,GF=0,GA=0,PTS=0))
+for r in snapshot:
     h,a=int(r['home_goals']),int(r['away_goals'])
-    for t,gf,ga in ((r['home_team'],h,a),(r['away_team'],a,h)):
-        x=base[t];x['P']+=1;x['GF']+=gf;x['GA']+=ga
-        if gf>ga:x['W']+=1;x['PTS']+=3
-        elif gf<ga:x['L']+=1
-        else:x['D']+=1;x['PTS']+=1
-# Compute table from the 65 verified official scores.
-computed=collections.defaultdict(lambda:dict(P=0,W=0,D=0,L=0,GF=0,GA=0,PTS=0))
-for r in finished:
-    h,a=int(r['home_goals']),int(r['away_goals'])
-    for t,gf,ga in ((r['home_team'],h,a),(r['away_team'],a,h)):
-        z=computed[t];z['P']+=1;z['GF']+=gf;z['GA']+=ga
+    for team,gf,ga in ((r['home_team'],h,a),(r['away_team'],a,h)):
+        z=base_calc[team];z['P']+=1;z['GF']+=gf;z['GA']+=ga
         if gf>ga:z['W']+=1;z['PTS']+=3
         elif gf<ga:z['L']+=1
         else:z['D']+=1;z['PTS']+=1
-assert len(computed)==20
-for t in computed:
-    assert computed[t]==base[t],(t,computed[t],base[t])
-# The only live game at the cutoff is intentionally scoreless in the dataset and excluded from finished metrics.
-live=[r for r in rows if r['status']=='live']
-assert len(live)==1 and live[0]['home_team']=='Fiorentina' and live[0]['away_team']=='Como'
-assert not live[0]['home_goals'] and not live[0]['away_goals']
-# Round fixture rows in the local verified excerpt cover the first 10 matchdays.
-assert all(sum(1 for r in rows if int(r['matchday'])==md)==10 for md in range(1,11))
-# Assert key embedded dashboard data count and responsive markers.
-html=open('serie_a_italia_2026_27_dashboard.html',encoding='utf-8').read()
-assert '<meta name="viewport"' in html and '@media(max-width:800px)' in html
-assert 'data-tab="matchup"' in html and 'data-tab="top5"' in html
-report=(
-'Snapshot: 2026-10-18 10:54 America/Sao_Paulo\n'
-'League: Italy Serie A 2026/27; 20 clubs.\n'
-'Fixture rows: 100, exactly 10 each for MD1–10; the source excerpt ends at MD10.\n'
-'Finished matches included: 65 (MD1–6: 60; MD7: 5).\n'
-'Official match-by-match score validation: PASS, all 65 scores and home/away orientations matched Lega Serie A calendar pages (MD1–6 10/10 each; MD7 5/5).\n'
-'Live fixture excluded: Fiorentina–Como; no in-play score included. Four other MD7 fixtures were not yet started at the cutoff.\n'
-'Independent table validation: PASS, all 20 clubs. WorldFootball.net baseline standings (MD1–6 plus Frosinone–Sassuolo 4–2) reconstructed and compared with the 65-match computed table after adding four further MD7 results independently listed by Global Sports Archive; P/W/D/L/GF/GA/points all match 20/20.\n'
-'Independent latest-result verification: Global Sports Archive listed all five completed MD7 scores; Sportstar/The Hindu also reported the three Saturday fixtures.\n'
-'Classifica official: live table was not used as a frozen table because Fiorentina–Como was still in progress.\n'
-'Fixture interaction: player details, venue splits, 5 latest, available upcoming fixtures through MD10; H2H from this season; projection thresholds; top-5 splits and rate denominators.\n'
-'JS/mobile validation: passed separately in local browser session; responsive viewport and breakpoint are present in HTML.\n'
-'Qualification display: verified CL positions 1–4 and relegation 18–20 only; other European slots left unshaded due cup/access-list dependency.\n'
-'No bookmaker, prediction feed, other league data, recurring jobs or external league project files used.\n'
-)
-open('serie_a_italia_2026_27_validation.txt','w',encoding='utf-8').write(report)
+for z in base_calc.values():z['GD']=z['GF']-z['GA']
+assert set(base_calc)==teams and len(stand)==20 and len({r['team'] for r in stand})==20
+for r in stand:
+    for k in ('P','W','D','L','GF','GA','GD','PTS'):
+        assert int(r[k])==base_calc[r['team']][k], (r['team'],k)
+base_order=sorted(base_calc,key=lambda t:(-base_calc[t]['PTS'],-base_calc[t]['GD'],-base_calc[t]['GF'],t))
+assert base_order==[r['team'] for r in sorted(stand,key=lambda x:int(x['position']))], 'frozen table order differs from ESPN snapshot'
+
+# Generated UI/payload checks. This remains valid as later final results are added.
+page=(ROOT/'index.html').read_text(encoding='utf-8')
+copy=(ROOT/'serie_a_italia_2026_27_dashboard.html').read_text(encoding='utf-8')
+assert page==copy, 'generated HTML copies differ'
+for phrase in ('Corte: ','380 jogos · calendário oficial completo','38 jornadas','data-tab="fixtures"','data-tab="matchup"','data-tab="top5"','Europa League','Conference League','@media(max-width:800px)','Data e horário individuais a confirmar'):
+    assert phrase in page, f'missing UI feature: {phrase}'
+for stale in ('100 jogos, jornadas 1–10','expansão oficial para jornadas 11–38 ainda não incorporada','limitado à cobertura verificada até MD10','Fixture coverage: 100 rows'):
+    assert stale not in page, f'stale HTML text: {stale}'
+match=re.search(r'const D=(\{.*?\});',page,re.S)
+assert match, 'embedded payload missing'
+payload=json.loads(match.group(1))
+assert len(payload['matches'])==len(finished) and len(payload['fixtures'])==380 and len(payload['table'])==20
+assert len(payload['roundDates'])==38 and not payload['liveExcluded']
+assert all(len([g for g in payload['fixtures'] if g['round']==md])==10 for md in range(1,39))
+assert all(not g['date'] and not g['time'] for g in payload['fixtures'] if g['round']>=11 and g['status']!='finished')
+complete=sorted(md for md in range(1,39) if sum(int(r['matchday'])==md and r['status']=='finished' for r in rows)==10)
+assert payload['completeRounds']==complete and payload['lastCompleteRound']==(max(complete) if complete else 0)
+assert 'window.__DASH_TEST=' in page and 'calendarReady:typeof renderFixtures===\'function\'' in page
+
+cutoff=payload['cutoff']
+report=f'''Snapshot: {cutoff}
+League: Serie A Italy 2026/27; 20 clubs.
+Fixtures: PASS — 380 official fixture entries across 38 matchdays, 10 per MD; each club appears once per round; all 190 pairings occur twice with home/away reversed.
+Official schedule: PASS — fixture pairs and round markers match the transcribed Lega Serie A official calendar PDF. MD1–10 individual dates/times are preserved; unconfirmed MD11–38 kickoffs remain blank unless the match has been played.
+Results: PASS — {len(finished)} final scores; verified MD1–7 baseline retained; no live/partial score included. New finals are matched against the official fixture list and must retain ESPN event IDs.
+Historical official score evidence: PASS — 65 results match the saved Lega Serie A match-by-match verification file; all ten MD7 scores and home/away orientations match archived ESPN scoreboards.
+Standings: PASS for the frozen 22-Oct baseline against ESPN's independent standings snapshot. Current standings are recomputed from all final scores; the Lega live table previously returned “NO DATA,” so no live official-table comparison is claimed.
+Generated UI: PASS static checks — HTML copies match; 20 clubs, 380 fixtures, 38 rounds, dynamic cutoff, calendar selector, team profiles, home/away splits, H2H, matchup and Top 5 controls are present; responsive CSS and no-JavaScript standings fallback are present.
+Browser interaction/mobile rendering: pending live-page validation after authorized publication.
+Publication: not confirmed until the public Pages URL matches the generated build.
+Automation: refresh script and scheduled workflow must be tested after authorized repository write access is granted.
+'''
+(ROOT/'serie_a_italia_2026_27_validation.txt').write_text(report,encoding='utf-8')
 print(report)

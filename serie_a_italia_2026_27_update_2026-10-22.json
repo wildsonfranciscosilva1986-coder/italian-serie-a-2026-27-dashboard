@@ -1,0 +1,11 @@
+{
+  "cutoff": "2026-10-22 08:26 America/Sao_Paulo",
+  "scoreboard_source": "ESPN public scoreboard API, dates 2026-10-16 through 2026-10-19",
+  "independent_secondary_sources": [
+    "Sky TG24 2026-10-18 reports Milan 3-2 Atalanta and Juventus 0-3 Lazio, https://tg24.sky.it/sport/2026/10/18/serie-a-partite-oggi-risultati-gol-highlights-video",
+    "Gazzetta di Parma 2026-10-19 reports Monza 4-0 Cagliari, https://www.gazzettadiparma.it/parma-calcio/2026/10/19/news/aspetti-il-cagliari-ma-esplode-il-monza-4-0-e-tre-punti-salvezza-d-oro-risultati-e-classifica-975572/",
+    "ESPN standings page fetched 2026-10-22 and reconciled to 70 match results"
+  ],
+  "official_lega_status": "Official Lega Serie A classifica page returned shell with NO DATA and blank table during this run; new five MD7 scores are independently verified, not freshly reconciled to a live official table.",
+  "fixture_coverage": "100 fixture rows through MD10 only; all-season 38-round extension still pending"
+}
