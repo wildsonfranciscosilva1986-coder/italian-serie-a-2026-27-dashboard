@@ -1,7 +1,11 @@
 {
-  "cutoff": "2026-10-22T13:54+02:00",
+  "cutoff": "2026-10-22T14:00+02:00",
   "scoreboard": "ESPN public soccer scoreboard API, Italy Serie A (ita.1)",
   "dates_checked": [
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14",
+    "2026-10-15",
     "2026-10-16",
     "2026-10-17",
     "2026-10-18",
@@ -10,7 +14,7 @@
     "2026-10-21",
     "2026-10-22"
   ],
-  "completed_events_checked": 10,
+  "completed_events_checked": 12,
   "new_results_applied": [],
   "note": "Only final scores matched to the official Lega fixture list are applied; existing results are never overwritten; future individual kickoffs are not inferred."
 }

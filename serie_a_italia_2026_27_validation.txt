@@ -1,4 +1,4 @@
-Snapshot: 2026-10-22 08:54 America/Sao_Paulo
+Snapshot: 2026-10-22 09:00 America/Sao_Paulo
 League: Serie A Italy 2026/27; 20 clubs.
 Fixtures: PASS — 380 official fixture entries across 38 matchdays, 10 per MD; each club appears once per round; all 190 pairings occur twice with home/away reversed.
 Official schedule: PASS — fixture pairs and round markers match the transcribed Lega Serie A official calendar PDF. MD1–10 individual dates/times are preserved; unconfirmed MD11–38 kickoffs remain blank unless the match has been played.
