@@ -23,7 +23,7 @@ Teste sem gravar alterações:
 python3 serie_a_italia_2026_27_refresh.py --check-only
 ```
 
-A rotina diária está definida em `.github/workflows/serie-a-italia-refresh.yml` para 06:10 de São Paulo (09:10 UTC). Ela busca resultados, reconstrói o painel, valida e só então grava/publica alterações. Só será considerada operacional após uma execução bem-sucedida no GitHub Actions e conferência da URL pública.
+A rotina diária está definida em `.github/workflows/serie-a-italia-refresh.yml` para 06:10 de São Paulo (09:10 UTC). Ela busca resultados, reconstrói o painel, valida e só então grava/publica alterações. Em 22/10/2026, a execução disparada pelo push concluiu com sucesso no GitHub Actions; o agendamento diário está configurado. A primeira execução disparada pelo cron ainda precisa ocorrer para confirmar a rotina recorrente.
 
 ## Estado validado do snapshot local
 
@@ -32,7 +32,7 @@ A rotina diária está definida em `.github/workflows/serie-a-italia-refresh.yml
 - Datas e horários individuais de MD1–10 preservados; MD11–38 exibem somente a data-guia oficial da jornada até que os horários sejam publicados.
 - Os 65 resultados iniciais conferem com evidências jogo a jogo da Lega Serie A; os dez resultados da jornada 7 conferem com snapshots ESPN. Resultados recentes também foram verificados com fontes jornalísticas independentes.
 - A tabela calculada a partir dos 70 resultados coincide com o snapshot independente ESPN de 22/10/2026. A página de classificação da Lega retornou “NO DATA” durante a verificação; portanto, não alegamos uma comparação ao vivo com a tabela oficial.
-- A interface local passou nas verificações estruturais: seis seções, calendário selecionável, classificação, fichas de equipes, recortes casa/fora, H2H, confronto e Top 5. A interação no navegador e o deploy público ainda precisam ser conferidos após a publicação.
+- A interface passou nas verificações estruturais locais: seis seções, calendário, classificação, fichas de equipes, recortes casa/fora, H2H, confronto e Top 5. A página pública foi publicada e os dados embutidos correspondem ao build validado, mas a interação não foi aprovada: no navegador de verificação, o seletor de jornada apareceu vazio. Teste em navegador com JavaScript habilitado e validação móvel ainda pendentes.
 
 ## Fontes
 
@@ -43,4 +43,4 @@ A rotina diária está definida em `.github/workflows/serie-a-italia-refresh.yml
 
 ## Publicação
 
-URL atual: https://wildsonfranciscosilva1986-coder.github.io/italian-serie-a-2026-27-dashboard/ . Ela ainda serve a versão antiga até que o build validado seja enviado ao repositório. O Pages está configurado para publicar a raiz de `main`; após o primeiro push da nova versão, confira a página pública e a primeira execução automática antes de marcar a rotina como ativa.
+URL pública: https://wildsonfranciscosilva1986-coder.github.io/italian-serie-a-2026-27-dashboard/ . Em 22/10/2026, após o push validado e a execução bem-sucedida do workflow, a página passou a servir 20 clubes, 70 resultados finais até a jornada 7 e 380 partidas do calendário oficial em 38 jornadas (snapshot público às 09:00 BRT). O payload público foi comparado com o build local: resultados, calendário, tabela e dados das equipes coincidem. Interações completas e teste móvel permanecem pendentes.

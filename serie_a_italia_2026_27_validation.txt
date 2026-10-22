@@ -1,11 +1,11 @@
-Snapshot: 2026-10-22 09:00 America/Sao_Paulo
-League: Serie A Italy 2026/27; 20 clubs.
-Fixtures: PASS — 380 official fixture entries across 38 matchdays, 10 per MD; each club appears once per round; all 190 pairings occur twice with home/away reversed.
-Official schedule: PASS — fixture pairs and round markers match the transcribed Lega Serie A official calendar PDF. MD1–10 individual dates/times are preserved; unconfirmed MD11–38 kickoffs remain blank unless the match has been played.
-Results: PASS — 70 final scores; verified MD1–7 baseline retained; no live/partial score included. New finals are matched against the official fixture list and must retain ESPN event IDs.
-Historical official score evidence: PASS — 65 results match the saved Lega Serie A match-by-match verification file; all ten MD7 scores and home/away orientations match archived ESPN scoreboards.
-Standings: PASS for the frozen 22-Oct baseline against ESPN's independent standings snapshot. Current standings are recomputed from all final scores; the Lega live table previously returned “NO DATA,” so no live official-table comparison is claimed.
-Generated UI: PASS static checks — HTML copies match; 20 clubs, 380 fixtures, 38 rounds, dynamic cutoff, calendar selector, team profiles, home/away splits, H2H, matchup and Top 5 controls are present; responsive CSS and no-JavaScript standings fallback are present.
-Browser interaction/mobile rendering: pending live-page validation after authorized publication.
-Publication: not confirmed until the public Pages URL matches the generated build.
-Automation: refresh script and scheduled workflow must be tested after authorized repository write access is granted.
+Validação local: 2026-10-22 08:54 America/Sao_Paulo; publicação conferida em 2026-10-22 09:00 BRT.
+Liga: Serie A Itália 2026/27; 20 clubes.
+Fixtures: PASS — 380 confrontos oficiais em 38 jornadas, 10 por jornada; cada clube aparece uma vez por rodada e os 190 pares se repetem com mando invertido.
+Calendário oficial: PASS — pares e marcadores de jornada conferem com o calendário oficial transcrito da Lega Serie A. MD1–10 preservam datas/horários individuais; kickoff de MD11–38 permanece não confirmado e em branco.
+Resultados: PASS — 70 placares finais confirmados até a jornada 7; sem placares parciais. Os 65 resultados anteriores mantêm evidência de conferência jogo a jogo; os dez placares e mandos da MD7 conferem com snapshots arquivados da ESPN.
+Classificação: PASS contra o snapshot independente da ESPN de 22/10/2026, após recalcular todos os 70 jogos. A tabela ao vivo da Lega retornou “NO DATA”; não alegar comparação com a tabela oficial ao vivo.
+Build local: PASS — HTMLs locais iguais e checagens estruturais para 6 seções, calendário de 38 jornadas, fichas de clubes, casa/fora, H2H, confronto, Top 5, CSS responsivo e fallback da classificação.
+Publicação: PASS — URL pública respondeu 200. O payload publicado contém 20 clubes, 70 partidas encerradas e 380 fixtures; tabela, resultados, calendário e dados de equipes coincidem com o build validado. Snapshot público: corte 22/10/2026 09:00 BRT.
+GitHub Actions: PASS — execução push-triggered #1 em 22/10/2026, job “Fetch, validate, build and publish” concluído com sucesso. Workflow configurado diariamente para 06:10 America/Sao_Paulo (09:10 UTC); primeira execução por cron ainda não ocorreu.
+Interação/mobile: PENDENTE — no navegador controlado de verificação, o seletor de jornada apareceu vazio; não foi possível confirmar o funcionamento das interações nem emular/validar layout móvel. Não liberar o próximo painel até repetir esses testes em navegador com JavaScript e viewport móvel.
+Limitações de dados: MD11–38 têm apenas marcador oficial da jornada, sem datas/horários individuais confirmados. A Lega não disponibilizou a tabela ao vivo (“NO DATA”).
