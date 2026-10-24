@@ -1,8 +1,8 @@
-Snapshot: 2026-10-23 11:12 America/Sao_Paulo
+Snapshot: 2026-10-24 10:16 America/Sao_Paulo
 League: Serie A Italy 2026/27; 20 clubs.
 Fixtures: PASS — 380 official fixture entries across 38 matchdays, 10 per MD; each club appears once per round; all 190 pairings occur twice with home/away reversed.
 Official schedule: PASS — fixture pairs and round markers match the transcribed Lega Serie A official calendar PDF. MD1–10 individual dates/times are preserved; unconfirmed MD11–38 kickoffs remain blank unless the match has been played.
-Results: PASS — 70 final scores; verified MD1–7 baseline retained; no live/partial score included. New finals are matched against the official fixture list and must retain ESPN event IDs.
+Results: PASS — 71 final scores; verified MD1–7 baseline retained; no live/partial score included. New finals are matched against the official fixture list and must retain ESPN event IDs.
 Historical official score evidence: PASS — 65 results match the saved Lega Serie A match-by-match verification file; all ten MD7 scores and home/away orientations match archived ESPN scoreboards.
 Standings: PASS for the frozen 22-Oct baseline against ESPN's independent standings snapshot. Current standings are recomputed from all final scores; the Lega live table previously returned “NO DATA,” so no live official-table comparison is claimed.
 Generated UI: PASS static checks — HTML copies match; 20 clubs, 380 fixtures, 38 rounds, dynamic cutoff, calendar selector, team profiles, home/away splits, H2H, matchup and Top 5 controls are present; responsive CSS and no-JavaScript standings fallback are present.

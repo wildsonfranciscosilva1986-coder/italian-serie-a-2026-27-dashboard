@@ -69,7 +69,7 @@ matchday,date,kickoff_local,home_team,home_goals,away_goals,away_team,status,off
 7,2026-10-18,20:45,Juventus,0,3,Lazio,finished,,2026-10-18,
 7,2026-10-19,18:30,Monza,4,0,Cagliari,finished,,2026-10-18,
 7,2026-10-19,20:45,Parma,0,3,Torino,finished,,2026-10-18,
-8,2026-10-23,20:45,Torino,,,Monza,scheduled,,2026-10-25,
+8,2026-10-23,20:45,Torino,3,2,Monza,finished,,2026-10-25,401874957
 8,2026-10-24,15:00,Cagliari,,,Bologna,scheduled,,2026-10-25,
 8,2026-10-24,15:00,Como,,,Sassuolo,scheduled,,2026-10-25,
 8,2026-10-24,18:00,Napoli,,,Roma,scheduled,,2026-10-25,

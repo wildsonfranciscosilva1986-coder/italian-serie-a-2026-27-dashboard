@@ -1,6 +1,6 @@
 {
   "season": "2026/27",
-  "cutoff": "2026-10-23 11:12 America/Sao_Paulo",
+  "cutoff": "2026-10-24 10:16 America/Sao_Paulo",
   "lastCompleteRound": 7,
   "completeRounds": [
     1,
@@ -943,6 +943,19 @@
       "official_match_id": "",
       "round_date": "2026-10-18",
       "espn_event_id": ""
+    },
+    {
+      "matchday": "8",
+      "date": "2026-10-23",
+      "kickoff_local": "20:45",
+      "home_team": "Torino",
+      "home_goals": "3",
+      "away_goals": "2",
+      "away_team": "Monza",
+      "status": "finished",
+      "official_match_id": "",
+      "round_date": "2026-10-25",
+      "espn_event_id": "401874957"
     }
   ],
   "fixtures": [
@@ -1722,9 +1735,9 @@
       "time": "20:45",
       "home": "Torino",
       "away": "Monza",
-      "status": "scheduled",
-      "home_goals": "",
-      "away_goals": "",
+      "status": "finished",
+      "home_goals": "3",
+      "away_goals": "2",
       "roundDateLabel": "25/10/2026"
     },
     {
@@ -5267,6 +5280,29 @@
       "GD": 4
     },
     {
+      "team": "Torino",
+      "P": 8,
+      "W": 4,
+      "D": 1,
+      "L": 3,
+      "GF": 13,
+      "GA": 11,
+      "PTS": 13,
+      "homeP": 4,
+      "homeW": 2,
+      "homeD": 0,
+      "homeL": 2,
+      "homeGF": 6,
+      "homeGA": 7,
+      "awayP": 4,
+      "awayW": 2,
+      "awayD": 1,
+      "awayL": 1,
+      "awayGF": 7,
+      "awayGA": 4,
+      "GD": 2
+    },
+    {
       "team": "Cagliari",
       "P": 7,
       "W": 4,
@@ -5334,29 +5370,6 @@
       "awayGF": 5,
       "awayGA": 5,
       "GD": 3
-    },
-    {
-      "team": "Torino",
-      "P": 7,
-      "W": 3,
-      "D": 1,
-      "L": 3,
-      "GF": 10,
-      "GA": 9,
-      "PTS": 10,
-      "homeP": 3,
-      "homeW": 1,
-      "homeD": 0,
-      "homeL": 2,
-      "homeGF": 3,
-      "homeGA": 5,
-      "awayP": 4,
-      "awayW": 2,
-      "awayD": 1,
-      "awayL": 1,
-      "awayGF": 7,
-      "awayGA": 4,
-      "GD": 1
     },
     {
       "team": "Atalanta",
@@ -5429,12 +5442,12 @@
     },
     {
       "team": "Monza",
-      "P": 7,
+      "P": 8,
       "W": 2,
       "D": 1,
-      "L": 4,
-      "GF": 13,
-      "GA": 15,
+      "L": 5,
+      "GF": 15,
+      "GA": 18,
       "PTS": 7,
       "homeP": 3,
       "homeW": 2,
@@ -5442,13 +5455,13 @@
       "homeL": 1,
       "homeGF": 8,
       "homeGA": 4,
-      "awayP": 4,
+      "awayP": 5,
       "awayW": 0,
       "awayD": 1,
-      "awayL": 3,
-      "awayGF": 5,
-      "awayGA": 11,
-      "GD": -2
+      "awayL": 4,
+      "awayGF": 7,
+      "awayGA": 14,
+      "GD": -3
     },
     {
       "team": "Bologna",
@@ -11724,12 +11737,12 @@
     },
     "Monza": {
       "stats": {
-        "P": 7,
+        "P": 8,
         "W": 2,
         "D": 1,
-        "L": 4,
-        "GF": 13,
-        "GA": 15,
+        "L": 5,
+        "GF": 15,
+        "GA": 18,
         "PTS": 7,
         "homeP": 3,
         "homeW": 2,
@@ -11737,15 +11750,28 @@
         "homeL": 1,
         "homeGF": 8,
         "homeGA": 4,
-        "awayP": 4,
+        "awayP": 5,
         "awayW": 0,
         "awayD": 1,
-        "awayL": 3,
-        "awayGF": 5,
-        "awayGA": 11,
-        "GD": -2
+        "awayL": 4,
+        "awayGF": 7,
+        "awayGA": 14,
+        "GD": -3
       },
       "last5": [
+        {
+          "matchday": "8",
+          "date": "2026-10-23",
+          "kickoff_local": "20:45",
+          "home_team": "Torino",
+          "home_goals": "3",
+          "away_goals": "2",
+          "away_team": "Monza",
+          "status": "finished",
+          "official_match_id": "",
+          "round_date": "2026-10-25",
+          "espn_event_id": "401874957"
+        },
         {
           "matchday": "7",
           "date": "2026-10-19",
@@ -11796,19 +11822,6 @@
           "status": "finished",
           "official_match_id": "",
           "round_date": "2026-09-13",
-          "espn_event_id": ""
-        },
-        {
-          "matchday": "3",
-          "date": "2026-09-06",
-          "kickoff_local": "15:00",
-          "home_team": "Parma",
-          "home_goals": "1",
-          "away_goals": "1",
-          "away_team": "Monza",
-          "status": "finished",
-          "official_match_id": "",
-          "round_date": "2026-09-06",
           "espn_event_id": ""
         }
       ],
@@ -11896,9 +11909,9 @@
           "time": "20:45",
           "home": "Torino",
           "away": "Monza",
-          "status": "scheduled",
-          "home_goals": "",
-          "away_goals": "",
+          "status": "finished",
+          "home_goals": "3",
+          "away_goals": "2",
           "roundDateLabel": "25/10/2026"
         },
         {
@@ -14279,28 +14292,41 @@
     },
     "Torino": {
       "stats": {
-        "P": 7,
-        "W": 3,
+        "P": 8,
+        "W": 4,
         "D": 1,
         "L": 3,
-        "GF": 10,
-        "GA": 9,
-        "PTS": 10,
-        "homeP": 3,
-        "homeW": 1,
+        "GF": 13,
+        "GA": 11,
+        "PTS": 13,
+        "homeP": 4,
+        "homeW": 2,
         "homeD": 0,
         "homeL": 2,
-        "homeGF": 3,
-        "homeGA": 5,
+        "homeGF": 6,
+        "homeGA": 7,
         "awayP": 4,
         "awayW": 2,
         "awayD": 1,
         "awayL": 1,
         "awayGF": 7,
         "awayGA": 4,
-        "GD": 1
+        "GD": 2
       },
       "last5": [
+        {
+          "matchday": "8",
+          "date": "2026-10-23",
+          "kickoff_local": "20:45",
+          "home_team": "Torino",
+          "home_goals": "3",
+          "away_goals": "2",
+          "away_team": "Monza",
+          "status": "finished",
+          "official_match_id": "",
+          "round_date": "2026-10-25",
+          "espn_event_id": "401874957"
+        },
         {
           "matchday": "7",
           "date": "2026-10-19",
@@ -14351,19 +14377,6 @@
           "status": "finished",
           "official_match_id": "",
           "round_date": "2026-09-13",
-          "espn_event_id": ""
-        },
-        {
-          "matchday": "3",
-          "date": "2026-09-05",
-          "kickoff_local": "15:00",
-          "home_team": "Fiorentina",
-          "home_goals": "1",
-          "away_goals": "2",
-          "away_team": "Torino",
-          "status": "finished",
-          "official_match_id": "",
-          "round_date": "2026-09-06",
           "espn_event_id": ""
         }
       ],
@@ -14451,9 +14464,9 @@
           "time": "20:45",
           "home": "Torino",
           "away": "Monza",
-          "status": "scheduled",
-          "home_goals": "",
-          "away_goals": "",
+          "status": "finished",
+          "home_goals": "3",
+          "away_goals": "2",
           "roundDateLabel": "25/10/2026"
         },
         {

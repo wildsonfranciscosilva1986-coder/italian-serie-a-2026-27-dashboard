@@ -1,0 +1,28 @@
+{
+  "cutoff": "2026-10-24T15:16+02:00",
+  "scoreboard": "ESPN public soccer scoreboard API, Italy Serie A (ita.1)",
+  "dates_checked": [
+    "2026-10-14",
+    "2026-10-15",
+    "2026-10-16",
+    "2026-10-17",
+    "2026-10-18",
+    "2026-10-19",
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-24"
+  ],
+  "completed_events_checked": 11,
+  "new_results_applied": [
+    {
+      "match": "Torino–Monza",
+      "score": "3–2",
+      "date": "2026-10-23",
+      "event_id": "401874957",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261023"
+    }
+  ],
+  "note": "Only final scores matched to the official Lega fixture list are applied; existing results are never overwritten; future individual kickoffs are not inferred."
+}
