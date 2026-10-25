@@ -70,11 +70,11 @@ matchday,date,kickoff_local,home_team,home_goals,away_goals,away_team,status,off
 7,2026-10-19,18:30,Monza,4,0,Cagliari,finished,,2026-10-18,
 7,2026-10-19,20:45,Parma,0,3,Torino,finished,,2026-10-18,
 8,2026-10-23,20:45,Torino,3,2,Monza,finished,,2026-10-25,401874957
-8,2026-10-24,15:00,Cagliari,,,Bologna,scheduled,,2026-10-25,
-8,2026-10-24,15:00,Como,,,Sassuolo,scheduled,,2026-10-25,
-8,2026-10-24,18:00,Napoli,,,Roma,scheduled,,2026-10-25,
-8,2026-10-24,20:45,Lazio,,,Parma,scheduled,,2026-10-25,
-8,2026-10-25,12:30,Inter,,,Fiorentina,scheduled,,2026-10-25,
+8,2026-10-24,15:00,Cagliari,0,2,Bologna,finished,,2026-10-25,401874958
+8,2026-10-24,15:00,Como,2,0,Sassuolo,finished,,2026-10-25,401874961
+8,2026-10-24,18:00,Napoli,3,3,Roma,finished,,2026-10-25,401874948
+8,2026-10-24,20:45,Lazio,2,1,Parma,finished,,2026-10-25,401874955
+8,2026-10-25,12:30,Inter,2,1,Fiorentina,finished,,2026-10-25,401875036
 8,2026-10-25,15:00,Atalanta,,,Frosinone,scheduled,,2026-10-25,
 8,2026-10-25,15:00,Genoa,,,Venezia,scheduled,,2026-10-25,
 8,2026-10-25,18:00,Lecce,,,Juventus,scheduled,,2026-10-25,

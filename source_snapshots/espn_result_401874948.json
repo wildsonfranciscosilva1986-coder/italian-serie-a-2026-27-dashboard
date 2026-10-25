@@ -1,0 +1,1003 @@
+{
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261024",
+  "scoreboard_date": "20261024",
+  "retrieved_at": "2026-10-25T14:40:53+01:00",
+  "official_fixture": {
+    "home": "Napoli",
+    "away": "Roma"
+  },
+  "event": {
+    "id": "401874948",
+    "uid": "s:600~l:730~e:401874948",
+    "date": "2026-10-24T16:00Z",
+    "name": "AS Roma at Napoli",
+    "shortName": "ROMA @ NAP",
+    "season": {
+      "year": 2026,
+      "type": 14240,
+      "slug": "2026-27-italian-serie-a"
+    },
+    "competitions": [
+      {
+        "id": "401874948",
+        "uid": "s:600~l:730~e:401874948~c:401874948",
+        "date": "2026-10-24T16:00Z",
+        "startDate": "2026-10-24T16:00Z",
+        "attendance": 0,
+        "timeValid": true,
+        "recent": false,
+        "status": {
+          "clock": 5400.0,
+          "displayClock": "90'+6'",
+          "period": 2,
+          "type": {
+            "id": "28",
+            "name": "STATUS_FULL_TIME",
+            "state": "post",
+            "completed": true,
+            "description": "Full Time",
+            "detail": "FT",
+            "shortDetail": "FT"
+          }
+        },
+        "venue": {
+          "id": "10717",
+          "fullName": "Stadio Diego Armando Maradona",
+          "address": {
+            "city": "Napoli",
+            "country": "Italy"
+          }
+        },
+        "format": {
+          "regulation": {
+            "periods": 2
+          }
+        },
+        "altGameNote": "Serie A",
+        "notes": [],
+        "geoBroadcasts": [
+          {
+            "type": {
+              "id": "4",
+              "shortName": "STREAMING"
+            },
+            "market": {
+              "id": "1",
+              "type": "National"
+            },
+            "media": {
+              "shortName": "Paramount+"
+            },
+            "lang": "en",
+            "region": "us"
+          }
+        ],
+        "broadcasts": [
+          {
+            "market": "national",
+            "names": [
+              "Paramount+"
+            ]
+          }
+        ],
+        "broadcast": "",
+        "competitors": [
+          {
+            "id": "114",
+            "uid": "s:600~t:114",
+            "type": "team",
+            "order": 0,
+            "homeAway": "home",
+            "winner": false,
+            "form": "DWLLW",
+            "score": "3",
+            "records": [
+              {
+                "name": "All Splits",
+                "type": "total",
+                "summary": "3-2-3",
+                "abbreviation": "Total"
+              }
+            ],
+            "team": {
+              "id": "114",
+              "uid": "s:600~t:114",
+              "abbreviation": "NAP",
+              "displayName": "Napoli",
+              "shortDisplayName": "Napoli",
+              "name": "Napoli",
+              "location": "Napoli",
+              "color": "0677d2",
+              "alternateColor": "ffffff",
+              "isActive": true,
+              "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+              "links": [
+                {
+                  "rel": [
+                    "clubhouse",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/club/_/id/114/napoli",
+                  "text": "Clubhouse",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "stats",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/stats/_/id/114/napoli",
+                  "text": "Stats",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "stats",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:114&section=stats",
+                  "text": "Stats",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "schedule",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/fixtures/_/id/114/napoli",
+                  "text": "Fixtures",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "schedule",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:114&section=scores",
+                  "text": "Fixtures",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "squad",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/squad/_/id/114/napoli",
+                  "text": "Squad",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "squad",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:114&section=squad",
+                  "text": "Squad",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                }
+              ],
+              "venue": {
+                "id": "10717"
+              }
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "abbreviation": "APP",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "abbreviation": "FC",
+                "displayValue": "6"
+              },
+              {
+                "name": "wonCorners",
+                "abbreviation": "CW",
+                "displayValue": "2"
+              },
+              {
+                "name": "goalAssists",
+                "abbreviation": "A",
+                "displayValue": "2"
+              },
+              {
+                "name": "possessionPct",
+                "abbreviation": "PP",
+                "displayValue": "39.4"
+              },
+              {
+                "name": "shotAssists",
+                "abbreviation": "SHAST",
+                "displayValue": "10"
+              },
+              {
+                "name": "shotsOnTarget",
+                "abbreviation": "SOG",
+                "displayValue": "9"
+              },
+              {
+                "name": "totalGoals",
+                "abbreviation": "G",
+                "displayValue": "3"
+              },
+              {
+                "name": "totalShots",
+                "abbreviation": "SHOT",
+                "displayValue": "15"
+              }
+            ]
+          },
+          {
+            "id": "104",
+            "uid": "s:600~t:104",
+            "type": "team",
+            "order": 1,
+            "homeAway": "away",
+            "winner": false,
+            "form": "DWWLD",
+            "score": "3",
+            "records": [
+              {
+                "name": "All Splits",
+                "type": "total",
+                "summary": "5-3-0",
+                "abbreviation": "Total"
+              }
+            ],
+            "team": {
+              "id": "104",
+              "uid": "s:600~t:104",
+              "abbreviation": "ROMA",
+              "displayName": "AS Roma",
+              "shortDisplayName": "AS Roma",
+              "name": "AS Roma",
+              "location": "AS Roma",
+              "color": "990a2c",
+              "alternateColor": "F5F3E5",
+              "isActive": true,
+              "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+              "links": [
+                {
+                  "rel": [
+                    "clubhouse",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/club/_/id/104/as-roma",
+                  "text": "Clubhouse",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "stats",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/stats/_/id/104/as-roma",
+                  "text": "Stats",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "stats",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:104&section=stats",
+                  "text": "Stats",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "schedule",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/fixtures/_/id/104/as-roma",
+                  "text": "Fixtures",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "schedule",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:104&section=scores",
+                  "text": "Fixtures",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "squad",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/squad/_/id/104/as-roma",
+                  "text": "Squad",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "squad",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:104&section=squad",
+                  "text": "Squad",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                }
+              ],
+              "venue": {
+                "id": "10409"
+              }
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "abbreviation": "APP",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "abbreviation": "FC",
+                "displayValue": "11"
+              },
+              {
+                "name": "wonCorners",
+                "abbreviation": "CW",
+                "displayValue": "11"
+              },
+              {
+                "name": "goalAssists",
+                "abbreviation": "A",
+                "displayValue": "3"
+              },
+              {
+                "name": "possessionPct",
+                "abbreviation": "PP",
+                "displayValue": "60.6"
+              },
+              {
+                "name": "shotAssists",
+                "abbreviation": "SHAST",
+                "displayValue": "21"
+              },
+              {
+                "name": "shotsOnTarget",
+                "abbreviation": "SOG",
+                "displayValue": "4"
+              },
+              {
+                "name": "totalGoals",
+                "abbreviation": "G",
+                "displayValue": "3"
+              },
+              {
+                "name": "totalShots",
+                "abbreviation": "SHOT",
+                "displayValue": "24"
+              }
+            ]
+          }
+        ],
+        "details": [
+          {
+            "type": {
+              "id": "94",
+              "text": "Yellow Card"
+            },
+            "clock": {
+              "value": 205.0,
+              "displayValue": "4'"
+            },
+            "team": {
+              "id": "114"
+            },
+            "scoreValue": 0,
+            "scoringPlay": false,
+            "redCard": false,
+            "yellowCard": true,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "297360",
+                "displayName": "Rafa Marín",
+                "shortName": "R. Marín",
+                "fullName": "Rafa Marín",
+                "jersey": "16",
+                "team": {
+                  "id": "114"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/297360/rafa-marin",
+                    "isHidden": false
+                  }
+                ],
+                "position": "CD-R"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "70",
+              "text": "Goal"
+            },
+            "clock": {
+              "value": 1629.0,
+              "displayValue": "28'"
+            },
+            "team": {
+              "id": "114"
+            },
+            "scoreValue": 1,
+            "scoringPlay": true,
+            "redCard": false,
+            "yellowCard": false,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "215721",
+                "displayName": "Frank Anguissa",
+                "shortName": "F. Anguissa",
+                "fullName": "Frank Anguissa",
+                "jersey": "99",
+                "team": {
+                  "id": "114"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/215721/frank-anguissa",
+                    "isHidden": false
+                  }
+                ],
+                "position": "RM"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "94",
+              "text": "Yellow Card"
+            },
+            "clock": {
+              "value": 1752.0,
+              "displayValue": "30'"
+            },
+            "team": {
+              "id": "104"
+            },
+            "scoreValue": 0,
+            "scoringPlay": false,
+            "redCard": false,
+            "yellowCard": true,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "169213",
+                "displayName": "Bryan Cristante",
+                "shortName": "B. Cristante",
+                "fullName": "Bryan Cristante",
+                "jersey": "4",
+                "team": {
+                  "id": "104"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/169213/bryan-cristante",
+                    "isHidden": false
+                  }
+                ],
+                "position": "AM"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "94",
+              "text": "Yellow Card"
+            },
+            "clock": {
+              "value": 2684.0,
+              "displayValue": "45'"
+            },
+            "team": {
+              "id": "104"
+            },
+            "scoreValue": 0,
+            "scoringPlay": false,
+            "redCard": false,
+            "yellowCard": true,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "297300",
+                "displayName": "Devyne Rensch",
+                "shortName": "D. Rensch",
+                "fullName": "Devyne Rensch",
+                "jersey": "2",
+                "team": {
+                  "id": "104"
+                },
+                "headshot": "https://a.espncdn.com/i/headshots/soccer/players/full/297300.png",
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/297300/devyne-rensch",
+                    "isHidden": false
+                  }
+                ],
+                "position": "RM"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "137",
+              "text": "Goal - Header"
+            },
+            "clock": {
+              "value": 2853.0,
+              "displayValue": "48'"
+            },
+            "team": {
+              "id": "114"
+            },
+            "scoreValue": 1,
+            "scoringPlay": true,
+            "redCard": false,
+            "yellowCard": false,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "255850",
+                "displayName": "Scott McTominay",
+                "shortName": "S. McTominay",
+                "fullName": "Scott McTominay",
+                "jersey": "8",
+                "team": {
+                  "id": "114"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/255850/scott-mctominay",
+                    "isHidden": false
+                  }
+                ],
+                "position": "LM"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "94",
+              "text": "Yellow Card"
+            },
+            "clock": {
+              "value": 3658.0,
+              "displayValue": "61'"
+            },
+            "team": {
+              "id": "104"
+            },
+            "scoreValue": 0,
+            "scoringPlay": false,
+            "redCard": false,
+            "yellowCard": true,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "271555",
+                "displayName": "Leonardo Balerdi",
+                "shortName": "L. Balerdi",
+                "fullName": "Leonardo Balerdi",
+                "jersey": "26",
+                "team": {
+                  "id": "104"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/271555/leonardo-balerdi",
+                    "isHidden": false
+                  }
+                ],
+                "position": "SUB"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "70",
+              "text": "Goal"
+            },
+            "clock": {
+              "value": 4138.0,
+              "displayValue": "69'"
+            },
+            "team": {
+              "id": "104"
+            },
+            "scoreValue": 1,
+            "scoringPlay": true,
+            "redCard": false,
+            "yellowCard": false,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "323974",
+                "displayName": "Matìas Soulè",
+                "shortName": "M. Soulè",
+                "fullName": "Matìas Soulè",
+                "jersey": "18",
+                "team": {
+                  "id": "104"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/323974/matias-soule",
+                    "isHidden": false
+                  }
+                ],
+                "position": "CF-R"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "70",
+              "text": "Goal"
+            },
+            "clock": {
+              "value": 4421.0,
+              "displayValue": "74'"
+            },
+            "team": {
+              "id": "104"
+            },
+            "scoreValue": 1,
+            "scoringPlay": true,
+            "redCard": false,
+            "yellowCard": false,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "271555",
+                "displayName": "Leonardo Balerdi",
+                "shortName": "L. Balerdi",
+                "fullName": "Leonardo Balerdi",
+                "jersey": "26",
+                "team": {
+                  "id": "104"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/271555/leonardo-balerdi",
+                    "isHidden": false
+                  }
+                ],
+                "position": "SUB"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "70",
+              "text": "Goal"
+            },
+            "clock": {
+              "value": 4925.0,
+              "displayValue": "83'"
+            },
+            "team": {
+              "id": "114"
+            },
+            "scoreValue": 1,
+            "scoringPlay": true,
+            "redCard": false,
+            "yellowCard": false,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "255850",
+                "displayName": "Scott McTominay",
+                "shortName": "S. McTominay",
+                "fullName": "Scott McTominay",
+                "jersey": "8",
+                "team": {
+                  "id": "114"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/255850/scott-mctominay",
+                    "isHidden": false
+                  }
+                ],
+                "position": "LM"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "94",
+              "text": "Yellow Card"
+            },
+            "clock": {
+              "value": 5117.0,
+              "displayValue": "86'"
+            },
+            "team": {
+              "id": "104"
+            },
+            "scoreValue": 0,
+            "scoringPlay": false,
+            "redCard": false,
+            "yellowCard": true,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "146335",
+                "displayName": "Marten de Roon",
+                "shortName": "M. de Roon",
+                "fullName": "Marten de Roon",
+                "jersey": "15",
+                "team": {
+                  "id": "104"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/146335/marten-de-roon",
+                    "isHidden": false
+                  }
+                ],
+                "position": "CM-R"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "137",
+              "text": "Goal - Header"
+            },
+            "clock": {
+              "value": 5294.0,
+              "displayValue": "89'"
+            },
+            "team": {
+              "id": "104"
+            },
+            "scoreValue": 1,
+            "scoringPlay": true,
+            "redCard": false,
+            "yellowCard": false,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "271555",
+                "displayName": "Leonardo Balerdi",
+                "shortName": "L. Balerdi",
+                "fullName": "Leonardo Balerdi",
+                "jersey": "26",
+                "team": {
+                  "id": "104"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/271555/leonardo-balerdi",
+                    "isHidden": false
+                  }
+                ],
+                "position": "SUB"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "93",
+              "text": "Red Card"
+            },
+            "clock": {
+              "value": 5395.0,
+              "displayValue": "90'"
+            },
+            "team": {
+              "id": "114"
+            },
+            "scoreValue": 0,
+            "scoringPlay": false,
+            "redCard": true,
+            "yellowCard": false,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false
+          }
+        ],
+        "odds": [
+          null
+        ],
+        "wasSuspended": false,
+        "playByPlayAvailable": true,
+        "playByPlayAthletes": true
+      }
+    ],
+    "status": {
+      "clock": 5400.0,
+      "displayClock": "90'+6'",
+      "period": 2,
+      "type": {
+        "id": "28",
+        "name": "STATUS_FULL_TIME",
+        "state": "post",
+        "completed": true,
+        "description": "Full Time",
+        "detail": "FT",
+        "shortDetail": "FT"
+      }
+    },
+    "venue": {
+      "displayName": "Stadio Diego Armando Maradona"
+    },
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "summary",
+          "desktop",
+          "event"
+        ],
+        "href": "https://www.espn.com/soccer/match/_/gameId/401874948/as-roma-napoli",
+        "text": "Summary",
+        "shortText": "Summary",
+        "isExternal": false,
+        "isPremium": false,
+        "isHidden": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "team-stats",
+          "desktop",
+          "event"
+        ],
+        "href": "https://www.espn.com/soccer/team-stats/_/gameId/401874948/league/ita.1",
+        "text": "Team Stats",
+        "shortText": "Team Stats",
+        "isExternal": false,
+        "isPremium": false,
+        "isHidden": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "player-stats",
+          "desktop",
+          "event"
+        ],
+        "href": "https://www.espn.com/soccer/player-stats/_/gameId/401874948/league/ita.1",
+        "text": "Player Stats",
+        "shortText": "Player Stats",
+        "isExternal": false,
+        "isPremium": false,
+        "isHidden": false
+      }
+    ]
+  }
+}
