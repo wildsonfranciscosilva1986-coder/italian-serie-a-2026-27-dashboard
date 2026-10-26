@@ -1,0 +1,49 @@
+{
+  "cutoff": "2026-10-26T17:04+01:00",
+  "scoreboard": "ESPN public soccer scoreboard API, Italy Serie A (ita.1)",
+  "dates_checked": [
+    "2026-10-16",
+    "2026-10-17",
+    "2026-10-18",
+    "2026-10-19",
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-24",
+    "2026-10-25",
+    "2026-10-26"
+  ],
+  "completed_events_checked": 20,
+  "new_results_applied": [
+    {
+      "match": "Atalanta–Frosinone",
+      "score": "4–4",
+      "date": "2026-10-25",
+      "event_id": "401874972",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261025"
+    },
+    {
+      "match": "Genoa–Venezia",
+      "score": "1–0",
+      "date": "2026-10-25",
+      "event_id": "401874952",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261025"
+    },
+    {
+      "match": "Lecce–Juventus",
+      "score": "0–2",
+      "date": "2026-10-25",
+      "event_id": "401874772",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261025"
+    },
+    {
+      "match": "Udinese–Milan",
+      "score": "0–2",
+      "date": "2026-10-25",
+      "event_id": "401874779",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261025"
+    }
+  ],
+  "note": "Only final scores matched to the official Lega fixture list are applied; existing results are never overwritten; future individual kickoffs are not inferred."
+}

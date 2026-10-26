@@ -75,10 +75,10 @@ matchday,date,kickoff_local,home_team,home_goals,away_goals,away_team,status,off
 8,2026-10-24,18:00,Napoli,3,3,Roma,finished,,2026-10-25,401874948
 8,2026-10-24,20:45,Lazio,2,1,Parma,finished,,2026-10-25,401874955
 8,2026-10-25,12:30,Inter,2,1,Fiorentina,finished,,2026-10-25,401875036
-8,2026-10-25,15:00,Atalanta,,,Frosinone,scheduled,,2026-10-25,
-8,2026-10-25,15:00,Genoa,,,Venezia,scheduled,,2026-10-25,
-8,2026-10-25,18:00,Lecce,,,Juventus,scheduled,,2026-10-25,
-8,2026-10-25,20:45,Udinese,,,Milan,scheduled,,2026-10-25,
+8,2026-10-25,15:00,Atalanta,4,4,Frosinone,finished,,2026-10-25,401874972
+8,2026-10-25,15:00,Genoa,1,0,Venezia,finished,,2026-10-25,401874952
+8,2026-10-25,18:00,Lecce,0,2,Juventus,finished,,2026-10-25,401874772
+8,2026-10-25,20:45,Udinese,0,2,Milan,finished,,2026-10-25,401874779
 9,2026-10-27,18:30,Sassuolo,,,Lazio,scheduled,,2026-10-28,
 9,2026-10-27,20:45,Roma,,,Cagliari,scheduled,,2026-10-28,
 9,2026-10-27,20:45,Torino,,,Como,scheduled,,2026-10-28,
