@@ -1,0 +1,42 @@
+{
+  "cutoff": "2026-10-28T16:57+01:00",
+  "scoreboard": "ESPN public soccer scoreboard API, Italy Serie A (ita.1)",
+  "dates_checked": [
+    "2026-10-18",
+    "2026-10-19",
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-24",
+    "2026-10-25",
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28"
+  ],
+  "completed_events_checked": 19,
+  "new_results_applied": [
+    {
+      "match": "Sassuolo–Lazio",
+      "score": "2–6",
+      "date": "2026-10-27",
+      "event_id": "401874980",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261027"
+    },
+    {
+      "match": "Roma–Cagliari",
+      "score": "4–2",
+      "date": "2026-10-27",
+      "event_id": "401874780",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261027"
+    },
+    {
+      "match": "Torino–Como",
+      "score": "1–3",
+      "date": "2026-10-27",
+      "event_id": "401874786",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261027"
+    }
+  ],
+  "note": "Only final scores matched to the official Lega fixture list are applied; existing results are never overwritten; future individual kickoffs are not inferred."
+}

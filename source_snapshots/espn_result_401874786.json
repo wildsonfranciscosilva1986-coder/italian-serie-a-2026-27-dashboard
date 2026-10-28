@@ -1,0 +1,718 @@
+{
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261027",
+  "scoreboard_date": "20261027",
+  "retrieved_at": "2026-10-28T16:57:38+01:00",
+  "official_fixture": {
+    "home": "Torino",
+    "away": "Como"
+  },
+  "event": {
+    "id": "401874786",
+    "uid": "s:600~l:730~e:401874786",
+    "date": "2026-10-27T19:45Z",
+    "name": "Como at Torino",
+    "shortName": "COMO @ TOR",
+    "season": {
+      "year": 2026,
+      "type": 14240,
+      "slug": "2026-27-italian-serie-a"
+    },
+    "competitions": [
+      {
+        "id": "401874786",
+        "uid": "s:600~l:730~e:401874786~c:401874786",
+        "date": "2026-10-27T19:45Z",
+        "startDate": "2026-10-27T19:45Z",
+        "attendance": 21160,
+        "timeValid": true,
+        "recent": false,
+        "status": {
+          "clock": 5400.0,
+          "displayClock": "90'+4'",
+          "period": 2,
+          "type": {
+            "id": "28",
+            "name": "STATUS_FULL_TIME",
+            "state": "post",
+            "completed": true,
+            "description": "Full Time",
+            "detail": "FT",
+            "shortDetail": "FT"
+          }
+        },
+        "venue": {
+          "id": "10716",
+          "fullName": "Stadio Olimpico Grande Torino",
+          "address": {
+            "city": "Torino",
+            "country": "Italy"
+          }
+        },
+        "format": {
+          "regulation": {
+            "periods": 2
+          }
+        },
+        "altGameNote": "Serie A",
+        "notes": [],
+        "geoBroadcasts": [
+          {
+            "type": {
+              "id": "4",
+              "shortName": "STREAMING"
+            },
+            "market": {
+              "id": "1",
+              "type": "National"
+            },
+            "media": {
+              "shortName": "Paramount+"
+            },
+            "lang": "en",
+            "region": "us"
+          }
+        ],
+        "broadcasts": [
+          {
+            "market": "national",
+            "names": [
+              "Paramount+"
+            ]
+          }
+        ],
+        "broadcast": "",
+        "competitors": [
+          {
+            "id": "239",
+            "uid": "s:600~t:239",
+            "type": "team",
+            "order": 0,
+            "homeAway": "home",
+            "winner": false,
+            "form": "DWWWD",
+            "score": "1",
+            "records": [
+              {
+                "name": "All Splits",
+                "type": "total",
+                "summary": "4-1-4",
+                "abbreviation": "Total"
+              }
+            ],
+            "team": {
+              "id": "239",
+              "uid": "s:600~t:239",
+              "abbreviation": "TOR",
+              "displayName": "Torino",
+              "shortDisplayName": "Torino",
+              "name": "Torino",
+              "location": "Torino",
+              "color": "9f0000",
+              "alternateColor": "ffffff",
+              "isActive": true,
+              "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+              "links": [
+                {
+                  "rel": [
+                    "clubhouse",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/club/_/id/239/torino",
+                  "text": "Clubhouse",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "stats",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/stats/_/id/239/torino",
+                  "text": "Stats",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "stats",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:239&section=stats",
+                  "text": "Stats",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "schedule",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/fixtures/_/id/239/torino",
+                  "text": "Fixtures",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "schedule",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:239&section=scores",
+                  "text": "Fixtures",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "squad",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/squad/_/id/239/torino",
+                  "text": "Squad",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "squad",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:239&section=squad",
+                  "text": "Squad",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                }
+              ],
+              "venue": {
+                "id": "10716"
+              }
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "abbreviation": "APP",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "abbreviation": "FC",
+                "displayValue": "10"
+              },
+              {
+                "name": "wonCorners",
+                "abbreviation": "CW",
+                "displayValue": "5"
+              },
+              {
+                "name": "goalAssists",
+                "abbreviation": "A",
+                "displayValue": "1"
+              },
+              {
+                "name": "possessionPct",
+                "abbreviation": "PP",
+                "displayValue": "27.6"
+              },
+              {
+                "name": "shotAssists",
+                "abbreviation": "SHAST",
+                "displayValue": "8"
+              },
+              {
+                "name": "shotsOnTarget",
+                "abbreviation": "SOG",
+                "displayValue": "5"
+              },
+              {
+                "name": "totalGoals",
+                "abbreviation": "G",
+                "displayValue": "1"
+              },
+              {
+                "name": "totalShots",
+                "abbreviation": "SHOT",
+                "displayValue": "11"
+              }
+            ]
+          },
+          {
+            "id": "2572",
+            "uid": "s:600~t:2572",
+            "type": "team",
+            "order": 1,
+            "homeAway": "away",
+            "winner": true,
+            "form": "DWWWL",
+            "score": "3",
+            "records": [
+              {
+                "name": "All Splits",
+                "type": "total",
+                "summary": "6-2-1",
+                "abbreviation": "Total"
+              }
+            ],
+            "team": {
+              "id": "2572",
+              "uid": "s:600~t:2572",
+              "abbreviation": "COMO",
+              "displayName": "Como",
+              "shortDisplayName": "Como",
+              "name": "Como",
+              "location": "Como",
+              "color": "4169E1",
+              "alternateColor": "FFFFFF",
+              "isActive": true,
+              "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+              "links": [
+                {
+                  "rel": [
+                    "clubhouse",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/club/_/id/2572/como",
+                  "text": "Clubhouse",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "stats",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/stats/_/id/2572/como",
+                  "text": "Stats",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "stats",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:2572&section=stats",
+                  "text": "Stats",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "schedule",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/fixtures/_/id/2572/como",
+                  "text": "Fixtures",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "schedule",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:2572&section=scores",
+                  "text": "Fixtures",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "squad",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/soccer/team/squad/_/id/2572/como",
+                  "text": "Squad",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                {
+                  "rel": [
+                    "squad",
+                    "sportscenter",
+                    "app",
+                    "team"
+                  ],
+                  "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:2572&section=squad",
+                  "text": "Squad",
+                  "isExternal": false,
+                  "isPremium": false,
+                  "isHidden": false
+                }
+              ],
+              "venue": {
+                "id": "5934"
+              }
+            },
+            "statistics": [
+              {
+                "name": "appearances",
+                "abbreviation": "APP",
+                "displayValue": "0"
+              },
+              {
+                "name": "foulsCommitted",
+                "abbreviation": "FC",
+                "displayValue": "3"
+              },
+              {
+                "name": "wonCorners",
+                "abbreviation": "CW",
+                "displayValue": "6"
+              },
+              {
+                "name": "goalAssists",
+                "abbreviation": "A",
+                "displayValue": "2"
+              },
+              {
+                "name": "possessionPct",
+                "abbreviation": "PP",
+                "displayValue": "72.4"
+              },
+              {
+                "name": "shotAssists",
+                "abbreviation": "SHAST",
+                "displayValue": "11"
+              },
+              {
+                "name": "shotsOnTarget",
+                "abbreviation": "SOG",
+                "displayValue": "5"
+              },
+              {
+                "name": "totalGoals",
+                "abbreviation": "G",
+                "displayValue": "3"
+              },
+              {
+                "name": "totalShots",
+                "abbreviation": "SHOT",
+                "displayValue": "18"
+              }
+            ]
+          }
+        ],
+        "details": [
+          {
+            "type": {
+              "id": "70",
+              "text": "Goal"
+            },
+            "clock": {
+              "value": 1423.0,
+              "displayValue": "24'"
+            },
+            "team": {
+              "id": "239"
+            },
+            "scoreValue": 1,
+            "scoringPlay": true,
+            "redCard": false,
+            "yellowCard": false,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "213725",
+                "displayName": "Ché Adams",
+                "shortName": "C. Adams",
+                "fullName": "Ché Adams",
+                "jersey": "19",
+                "team": {
+                  "id": "239"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/213725/che-adams",
+                    "isHidden": false
+                  }
+                ],
+                "position": "CF-L"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "94",
+              "text": "Yellow Card"
+            },
+            "clock": {
+              "value": 4315.0,
+              "displayValue": "72'"
+            },
+            "team": {
+              "id": "239"
+            },
+            "scoreValue": 0,
+            "scoringPlay": false,
+            "redCard": false,
+            "yellowCard": true,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "364590",
+                "displayName": "Rafik Belghali",
+                "shortName": "R. Belghali",
+                "fullName": "Rafik Belghali",
+                "jersey": "45",
+                "team": {
+                  "id": "239"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/364590/rafik-belghali",
+                    "isHidden": false
+                  }
+                ],
+                "position": "RM"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "137",
+              "text": "Goal - Header"
+            },
+            "clock": {
+              "value": 4850.0,
+              "displayValue": "81'"
+            },
+            "team": {
+              "id": "2572"
+            },
+            "scoreValue": 1,
+            "scoringPlay": true,
+            "redCard": false,
+            "yellowCard": false,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "380318",
+                "displayName": "Jacobo Ramón",
+                "shortName": "J. Ramón",
+                "fullName": "Jacobo Ramón",
+                "jersey": "4",
+                "team": {
+                  "id": "2572"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/380318/jacobo-ramon",
+                    "isHidden": false
+                  }
+                ],
+                "position": "CD-R"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "137",
+              "text": "Goal - Header"
+            },
+            "clock": {
+              "value": 5215.0,
+              "displayValue": "87'"
+            },
+            "team": {
+              "id": "2572"
+            },
+            "scoreValue": 1,
+            "scoringPlay": true,
+            "redCard": false,
+            "yellowCard": false,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "337970",
+                "displayName": "Nico Paz",
+                "shortName": "N. Paz",
+                "fullName": "Nico Paz",
+                "jersey": "10",
+                "team": {
+                  "id": "2572"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/337970/nico-paz",
+                    "isHidden": false
+                  }
+                ],
+                "position": "AM"
+              }
+            ]
+          },
+          {
+            "type": {
+              "id": "70",
+              "text": "Goal"
+            },
+            "clock": {
+              "value": 5400.0,
+              "displayValue": "90'+2'"
+            },
+            "team": {
+              "id": "2572"
+            },
+            "scoreValue": 1,
+            "scoringPlay": true,
+            "redCard": false,
+            "yellowCard": false,
+            "penaltyKick": false,
+            "ownGoal": false,
+            "shootout": false,
+            "athletesInvolved": [
+              {
+                "id": "311475",
+                "displayName": "Martin Baturina",
+                "shortName": "M. Baturina",
+                "fullName": "Martin Baturina",
+                "jersey": "20",
+                "team": {
+                  "id": "2572"
+                },
+                "links": [
+                  {
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ],
+                    "href": "https://www.espn.com/soccer/player/_/id/311475/martin-baturina",
+                    "isHidden": false
+                  }
+                ],
+                "position": "SUB"
+              }
+            ]
+          }
+        ],
+        "odds": [
+          null
+        ],
+        "wasSuspended": false,
+        "playByPlayAvailable": true,
+        "playByPlayAthletes": true
+      }
+    ],
+    "status": {
+      "clock": 5400.0,
+      "displayClock": "90'+4'",
+      "period": 2,
+      "type": {
+        "id": "28",
+        "name": "STATUS_FULL_TIME",
+        "state": "post",
+        "completed": true,
+        "description": "Full Time",
+        "detail": "FT",
+        "shortDetail": "FT"
+      }
+    },
+    "venue": {
+      "displayName": "Stadio Olimpico Grande Torino"
+    },
+    "links": [
+      {
+        "language": "en-US",
+        "rel": [
+          "summary",
+          "desktop",
+          "event"
+        ],
+        "href": "https://www.espn.com/soccer/match/_/gameId/401874786/como-torino",
+        "text": "Summary",
+        "shortText": "Summary",
+        "isExternal": false,
+        "isPremium": false,
+        "isHidden": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "team-stats",
+          "desktop",
+          "event"
+        ],
+        "href": "https://www.espn.com/soccer/team-stats/_/gameId/401874786/league/ita.1",
+        "text": "Team Stats",
+        "shortText": "Team Stats",
+        "isExternal": false,
+        "isPremium": false,
+        "isHidden": false
+      },
+      {
+        "language": "en-US",
+        "rel": [
+          "player-stats",
+          "desktop",
+          "event"
+        ],
+        "href": "https://www.espn.com/soccer/player-stats/_/gameId/401874786/league/ita.1",
+        "text": "Player Stats",
+        "shortText": "Player Stats",
+        "isExternal": false,
+        "isPremium": false,
+        "isHidden": false
+      }
+    ]
+  }
+}
