@@ -82,11 +82,11 @@ matchday,date,kickoff_local,home_team,home_goals,away_goals,away_team,status,off
 9,2026-10-27,18:30,Sassuolo,2,6,Lazio,finished,,2026-10-28,401874980
 9,2026-10-27,20:45,Roma,4,2,Cagliari,finished,,2026-10-28,401874780
 9,2026-10-27,20:45,Torino,1,3,Como,finished,,2026-10-28,401874786
-9,2026-10-28,18:30,Milan,,,Bologna,scheduled,,2026-10-28,
-9,2026-10-28,18:30,Parma,,,Udinese,scheduled,,2026-10-28,
-9,2026-10-28,18:30,Venezia,,,Inter,scheduled,,2026-10-28,
-9,2026-10-28,20:45,Genoa,,,Juventus,scheduled,,2026-10-28,
-9,2026-10-28,20:45,Monza,,,Napoli,scheduled,,2026-10-28,
+9,2026-10-28,18:30,Milan,2,4,Bologna,finished,,2026-10-28,401874993
+9,2026-10-28,18:30,Parma,0,0,Udinese,finished,,2026-10-28,401874965
+9,2026-10-28,18:30,Venezia,0,2,Inter,finished,,2026-10-28,401874773
+9,2026-10-28,20:45,Genoa,2,0,Juventus,finished,,2026-10-28,401874988
+9,2026-10-28,20:45,Monza,1,4,Napoli,finished,,2026-10-28,401874799
 9,2026-10-29,18:30,Frosinone,,,Lecce,scheduled,,2026-10-28,
 9,2026-10-29,20:45,Fiorentina,,,Atalanta,scheduled,,2026-10-28,
 10,2026-10-31,15:00,Bologna,,,Monza,scheduled,,2026-11-01,
