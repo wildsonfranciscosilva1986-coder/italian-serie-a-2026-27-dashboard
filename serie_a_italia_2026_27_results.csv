@@ -89,11 +89,11 @@ matchday,date,kickoff_local,home_team,home_goals,away_goals,away_team,status,off
 9,2026-10-28,20:45,Monza,1,4,Napoli,finished,,2026-10-28,401874799
 9,2026-10-29,18:30,Frosinone,5,1,Lecce,finished,,2026-10-28,401874976
 9,2026-10-29,20:45,Fiorentina,2,2,Atalanta,finished,,2026-10-28,401874969
-10,2026-10-31,15:00,Bologna,,,Monza,scheduled,,2026-11-01,
-10,2026-10-31,18:00,Udinese,,,Roma,scheduled,,2026-11-01,
-10,2026-10-31,20:45,Milan,,,Inter,scheduled,,2026-11-01,
-10,2026-11-01,12:30,Como,,,Venezia,scheduled,,2026-11-01,
-10,2026-11-01,15:00,Frosinone,,,Torino,scheduled,,2026-11-01,
+10,2026-10-31,15:00,Bologna,2,1,Monza,finished,,2026-11-01,401874798
+10,2026-10-31,18:00,Udinese,2,5,Roma,finished,,2026-11-01,401874990
+10,2026-10-31,20:45,Milan,3,1,Inter,finished,,2026-11-01,401874795
+10,2026-11-01,12:30,Como,1,0,Venezia,finished,,2026-11-01,401875002
+10,2026-11-01,15:00,Frosinone,2,0,Torino,finished,,2026-11-01,401874782
 10,2026-11-01,15:00,Lazio,,,Cagliari,scheduled,,2026-11-01,
 10,2026-11-01,18:00,Lecce,,,Genoa,scheduled,,2026-11-01,
 10,2026-11-01,20:45,Juventus,,,Napoli,scheduled,,2026-11-01,

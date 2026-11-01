@@ -1,0 +1,56 @@
+{
+  "cutoff": "2026-11-01T16:57+01:00",
+  "scoreboard": "ESPN public soccer scoreboard API, Italy Serie A (ita.1)",
+  "dates_checked": [
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-24",
+    "2026-10-25",
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30",
+    "2026-10-31",
+    "2026-11-01"
+  ],
+  "completed_events_checked": 25,
+  "new_results_applied": [
+    {
+      "match": "Bologna–Monza",
+      "score": "2–1",
+      "date": "2026-10-31",
+      "event_id": "401874798",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261031"
+    },
+    {
+      "match": "Udinese–Roma",
+      "score": "2–5",
+      "date": "2026-10-31",
+      "event_id": "401874990",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261031"
+    },
+    {
+      "match": "Milan–Inter",
+      "score": "3–1",
+      "date": "2026-10-31",
+      "event_id": "401874795",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261031"
+    },
+    {
+      "match": "Como–Venezia",
+      "score": "1–0",
+      "date": "2026-11-01",
+      "event_id": "401875002",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261101"
+    },
+    {
+      "match": "Frosinone–Torino",
+      "score": "2–0",
+      "date": "2026-11-01",
+      "event_id": "401874782",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20261101"
+    }
+  ],
+  "note": "Only final scores matched to the official Lega fixture list are applied; existing results are never overwritten; future individual kickoffs are not inferred."
+}
