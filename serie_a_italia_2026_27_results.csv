@@ -98,7 +98,7 @@ matchday,date,kickoff_local,home_team,home_goals,away_goals,away_team,status,off
 10,2026-11-01,18:00,Lecce,1,2,Genoa,finished,,2026-11-01,401874968
 10,2026-11-01,20:45,Juventus,2,0,Napoli,finished,,2026-11-01,401874949
 10,2026-11-02,18:30,Sassuolo,2,4,Fiorentina,finished,,2026-11-01,401874963
-10,2026-11-02,20:45,Atalanta,,,Parma,scheduled,,2026-11-01,
+10,2026-11-02,20:45,Atalanta,0,3,Parma,finished,,2026-11-01,401874971
 11,,,Cagliari,,,Frosinone,scheduled,,2026-11-08,
 11,,,Fiorentina,,,Juventus,scheduled,,2026-11-08,
 11,,,Genoa,,,Milan,scheduled,,2026-11-08,
